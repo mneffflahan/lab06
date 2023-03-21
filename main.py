@@ -16,23 +16,6 @@ def encode_one(x):
     return str(x)
 
 
-def to_unencoded(password):
-    password_final = []
-    password = str(password)
-    for x in range(len(password)):
-        password_final = password_final + [unencode_one(password[x])]
-    password_final = ''.join(password_final)
-    return password_final
-
-def unencode_one(x):
-    x = int(x)
-    if x in [3, 4, 5, 6,7, 8, 9]:
-        x -= 3
-    elif x in [0, 1, 2]:
-        x += 7
-    return str(x)
-
-
 def menu():
     print("Menu")
     print("-------------")
@@ -41,7 +24,7 @@ def menu():
     print("3. Quit")
 
 
-if name == 'main':
+if __name__ == '__main__':
     loop = 1
     while loop == 1:
         menu()
