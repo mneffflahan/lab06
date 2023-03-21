@@ -48,8 +48,8 @@ if __name__ == '__main__':
         if menu_option == 1:
             password = input("Please enter your password to encode: ")
             encoded_password = to_encoded(password)
-            print("")
+            print("Your password has been encoded and stored!")
         elif menu_option == 2:
-            password = input("Please enter your password to encode: ")
+            print("The encoded password is", encoded_password, "and the original password is", password)
         elif menu_option == 3:
             exit()
